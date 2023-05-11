@@ -1,22 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-body {
+:root {
+  --color1: #4071f4;
+  --color2: #f4f4f4;
+  --color3: #3a6ef8;
+  --facebookColor: #3b5998;
+  --instcolor: #db326b;
+  --tweetcolor: #1da3ed;
+  --whatsappcolor: #25d366;
+  --youtubecolor: #c4302b;
+}
+/* body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-}
+  background-color: var(--color2);
+} */
 ul {
   list-style: none;
 }
 .card {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  min-height: 100vh;
+  background-color: var(--color2);
+  /* gap: 2rem; */
   /* box-shadow: 5px 10px inset; */
   /* width: 90%; */
 }
@@ -30,6 +49,136 @@ ul {
   border-radius: 5px;
 }
 h2 {
-  font-size: 5.3rem;
-  color: #347deb;
+  font-size: 4.3rem;
+  /* color: #347deb; */
+  color: var(--color3);
+  font-weight: 600;
+}
+.card_right .name-title {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.card_right .description {
+  font-weight: 400;
+}
+.profile_container {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background-color: var(--color3);
+  padding: 3px;
+  position: relative;
+}
+
+.profile-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 3px solid #fbfcf8;
+}
+
+.card .card_right {
+  background-color: #fbfcf8;
+  max-width: 330px;
+  width: 325px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 1px 0px 10px 0px rgb(163, 164, 161);
+}
+
+.card_right::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: var(--color3);
+  width: 100%;
+  height: 120px;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card_right ul li {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.card_right .social-icon-group {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card_right .social-icon-group li {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  transition: 0.4s;
+}
+
+.card_right .social-icon-group li:first-child {
+  background-color: var(--tweetcolor);
+}
+.card_right .social-icon-group li:nth-child(2) {
+  background-color: var(--whatsappcolor);
+}
+
+.card_right .social-icon-group li:nth-child(3) {
+  background-color: var(--instcolor);
+}
+.card_right .social-icon-group li:last-child {
+  background-color: var(--youtubecolor);
+}
+
+.btn-group {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.btn {
+  padding: 0.4rem 1rem;
+  border-radius: 1.6rem;
+  border: none;
+  background-color: var(--color1);
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0047ab;
+  transform: scale(1.2);
+}
+
+.card_right .stats-icon li i {
+  border-left: 2px solid #ccc;
+  padding-left: 1rem;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.card_right .stats-icon li:first-child i {
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem;
+    min-height: 100vh;
+  }
 }
