@@ -3,36 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-.card {
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  margin: 50px 20px;
-  width: 40%;
-  gap: 3rem;
-}
-.card .card_left {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  /* width: 50%; */
-}
-h2 {
-  font-size: 50px;
-  color: #3489eb;
-}
-.line {
-  border-left: 8px solid #3489eb;
-  height: 170px;
-  border-radius: 5px;
-}
-.card .card_right {
+
+body {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   justify-content: center;
-  /* width: 50%; */
+  min-height: 100vh;
 }
-ul {
-  list-style-type: none;
+.card {
+  display: flex;
 }
