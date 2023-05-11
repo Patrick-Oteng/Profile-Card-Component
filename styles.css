@@ -11,6 +11,25 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+ul {
+  list-style: none;
+}
 .card {
   display: flex;
+  gap: 2rem;
+  /* box-shadow: 5px 10px inset; */
+  /* width: 90%; */
+}
+.card_left {
+  display: flex;
+  gap: 1rem;
+}
+.card .card_left .line {
+  border-left: 9px solid #347deb;
+  height: 300px;
+  border-radius: 5px;
+}
+h2 {
+  font-size: 5.3rem;
+  color: #347deb;
 }
